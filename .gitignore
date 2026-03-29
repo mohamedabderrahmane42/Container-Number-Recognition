@@ -1,0 +1,28 @@
+# --- Data ---
+data/**
+Container\ Code\ Detection.v1i.yolov8/**
+
+# --- Models ---
+# Small weights can be kept, but large .pt files are usually linked externally
+weights/*.pt
+
+# --- Output & Logs ---
+output/**
+runs/**
+*.log
+*.log.*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# --- Jupyter ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- OS ---
+.DS_Store
+Thumbs.db
