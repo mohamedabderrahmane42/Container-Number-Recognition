@@ -84,7 +84,3 @@ $env:DETECT_MODE='container'; python -m src.inference.pipeline --input "data/my_
 python start.py
 ```
 
----
-
-## 📧 Support
-For support or data links, contact the maintainer.
