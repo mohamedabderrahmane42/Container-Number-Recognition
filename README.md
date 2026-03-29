@@ -23,16 +23,30 @@ The system follows a robust **Two-Stage Pipeline**:
 
 ---
 
-## 📊 Model Comparison: Precision vs. Expert
+## 🧪 Model Branches: Precision vs. LSTM-CNN
+The system provides two production-ready paths to suit your hardware and accuracy needs. Both models utilize the **ISO 6346 Smart Corrector** to ensure mathematical validity.
+
+### 1. Precision Mode (Champion 🏆)
+- **Engine**: EasyOCR + YOLOv8
+- **Best for**: 100% accuracy requirements (billing, logistics).
+- **Interactive Test**: [test_precision.ipynb](test_precision.ipynb)
+
+### 2. LSTM-CNN Mode (Research ⚡)
+- **Engine**: Custom CRNN (CNN + Bi-LSTM) + YOLOv8
+- **Best for**: High-speed industrial monitoring and embedded systems.
+- **Interactive Test**: [test_lstm_cnn.ipynb](test_lstm_cnn.ipynb)
+
+---
+
+## 📊 Performance Comparison
 Tested on the standard "Evergreen" ISO container:
 
-| Feature | Precision Mode (EasyOCR + Smart) | Expert Mode (Custom CRNN) |
+| Feature | Precision Mode (EasyOCR + Smart) | LSTM-CNN Mode (Custom + Smart) |
 | :--- | :--- | :--- |
 | **Raw Output** | `EITU 178639 P` | `TCHU 1` |
 | **Smart Corrected** | **`EITU 178639 3`** ✅ | `TCHU 1` 🔡 |
-| **Accuracy** | **100% (Champion)** | 75% (Owner Code Expert) |
-| **Speed** | 1.2s / image | **0.05s / image** |
-| **Best For** | Accurate billing and logistics | Real-time monitoring & research |
+| **Accuracy** | **100% (Production)** | 75% (Owner Code Expert) |
+| **Inference Time** | 1.2s / image | **0.05s / image** |
 
 ---
 
